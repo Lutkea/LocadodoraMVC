@@ -9,6 +9,7 @@ namespace LocadodoraMVC
         {
             View.ViewCliente.AddCliente();
             View.ViewFilme.AddFilme();
+            View.ViewLocacao.Addlocacoes();
 
             int op =0;
             do{
@@ -42,6 +43,8 @@ namespace LocadodoraMVC
                     }
                     case 3:{
                         Console.WriteLine("Consultar Cliente e Filmes locados ");
+                        View.ViewLocacao.Locacao();
+                        Console.WriteLine("\n");
                         break;
                     }
                     case 0:{

@@ -6,7 +6,7 @@ namespace Models
 {
     public class Cliente
     {      
-            private int IdCLiente { get; set; }
+            public int IdCLiente { get; set; }
             public String Nome { get; set; }
             public String Cpf { get; set; }
             public String DtNasc { get; set; }

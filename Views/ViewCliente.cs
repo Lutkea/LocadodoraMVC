@@ -13,7 +13,7 @@ namespace View{
         }
         public static void Cliente(){
             
-            foreach (Cliente cliente in Models.Cliente.Clientes())
+            foreach (Cliente cliente in ClienteController.cliente())
             {
                 Console.WriteLine(cliente);
             }

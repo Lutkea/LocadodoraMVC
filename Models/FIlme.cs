@@ -6,7 +6,7 @@ namespace Models
 {
     public class Filme
     {      
-            private int IdFilme { get; set; }
+            public int IdFilme { get; set; }
             public String Nome { get; set; }
             public String Sinopse { get; set; }
             public String AnoLancamento { get; set; }
@@ -18,7 +18,6 @@ namespace Models
             Sinopse = sinopse;
             AnoLancamento = anolanc;
             Valor = valor;
-
 
             RepositoryFilme.addFilme(this);     
         }

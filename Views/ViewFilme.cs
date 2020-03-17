@@ -19,7 +19,7 @@ namespace View{
         public static void Filme(){
            
 
-            foreach (Filme filme in Models.Filme.Filmes())
+            foreach (Filme filme in FilmeController.filme())
             {
                 Console.WriteLine(filme);
             }
