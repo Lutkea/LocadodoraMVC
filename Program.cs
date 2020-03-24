@@ -32,18 +32,18 @@ namespace LocadodoraMVC
                 {
                     case 1:{
                         Console.WriteLine("Consultar Cliente");
-                        View.ViewCliente.Cliente();
+                        View.ViewCliente.AddCliente();
                         break;
                     }
                     case 2:{
                         Console.WriteLine("Consultar Filme");
-                        View.ViewFilme.Filme();
+                        View.ViewFilme.AddFilme();
                         Console.WriteLine("\n");
                         break;
                     }
                     case 3:{
                         Console.WriteLine("Consultar Cliente e Filmes locados ");
-                        View.ViewLocacao.Locacao();
+                        View.ViewLocacao.Addlocacoes();
                         Console.WriteLine("\n");
                         break;
                     }

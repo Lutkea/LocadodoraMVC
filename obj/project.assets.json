@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amanda.lutke\\Desktop\\C#\\LocadodoraMVC\\LocadodoraMVC.csproj",
+      "projectUniqueName": "C:\\Users\\amanda.lutke\\Documents\\mvc\\LocadodoraMVC\\LocadodoraMVC.csproj",
       "projectName": "LocadodoraMVC",
-      "projectPath": "C:\\Users\\amanda.lutke\\Desktop\\C#\\LocadodoraMVC\\LocadodoraMVC.csproj",
+      "projectPath": "C:\\Users\\amanda.lutke\\Documents\\mvc\\LocadodoraMVC\\LocadodoraMVC.csproj",
       "packagesPath": "C:\\Users\\amanda.lutke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amanda.lutke\\Desktop\\C#\\LocadodoraMVC\\obj\\",
+      "outputPath": "C:\\Users\\amanda.lutke\\Documents\\mvc\\LocadodoraMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amanda.lutke\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

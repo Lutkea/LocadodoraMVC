@@ -2,6 +2,8 @@ using System;
 using Models;
 using Controllers;
 using System.Collections.Generic;
+using System.Linq;
+using System.Collections;
 
 namespace View{
     public class ViewLocacao {
@@ -19,12 +21,17 @@ namespace View{
             LocacaoController.addlocacoes(8, clientes.Find(cliente => cliente.IdCLiente == 8), filmes.Find( filme => filme.IdFilme == 4), new DateTime(2020,02,02) );
             LocacaoController.addlocacoes(9, clientes.Find(cliente => cliente.IdCLiente == 9), filmes.Find( filme => filme.IdFilme == 5), new DateTime(2020,03,16) );
             LocacaoController.addlocacoes(10,clientes.Find(cliente => cliente.IdCLiente == 10), filmes.Find( filme => filme.IdFilme == 7), new DateTime(2020,02,21) );
-        }
-        public static void Locacao(){
-        
-            foreach (Locacao locacao in LocacaoController.locacoes())
+
+            
+                IEnumerable LocQuery = 
+                from Locacao in LocacaoController.locacoes()
+                where Locacao.IdLocacao > 1
+                select Locacao;
+                   
+            foreach (Locacao locacao in LocQuery)
             {
-                Console.WriteLine(locacao);
+                Console.WriteLine(locacao.IdLocacao);
+                Console.WriteLine(locacao.Cliente);
             }
         }
     }

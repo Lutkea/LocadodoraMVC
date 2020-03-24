@@ -1,6 +1,8 @@
 using System;
 using Models;
 using Controllers;
+using System.Linq;
+using System.Collections;
 
 namespace View{
     public class ViewFilme {
@@ -15,13 +17,16 @@ namespace View{
             FilmeController.addFilme(8, "Parasita", "2019", "Ganhou o oscar", 10);
             FilmeController.addFilme(9, "O grito", "1999", "Muita gente gritando", 1);
             FilmeController.addFilme(10, "Frozen", "2020", "Imagem do fim da terra, paredão de gelo", 15);
-        }
-        public static void Filme(){
-           
 
-            foreach (Filme filme in FilmeController.filme())
+                IEnumerable FilmeQuery = 
+                from Filme in FilmeController.filme()
+                where Filme.IdFilme > 5
+                select Filme;
+             
+            foreach (Filme filme in FilmeQuery)
             {
-                Console.WriteLine(filme);
+                Console.WriteLine(filme.Nome);
+                Console.WriteLine(filme.Sinopse);
             }
         }
     }

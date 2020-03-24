@@ -1,6 +1,8 @@
 using System;
 using Models;
 using Controllers;
+using System.Linq;
+using System.Collections;
 
 namespace View{
     public class ViewCliente {
@@ -10,12 +12,16 @@ namespace View{
             ClienteController.addCliente(3,"Roberta Justas", "15/02/1985", "124.845.985-54", 2);
             ClienteController.addCliente(4,"Rosalia Malía", "02/08/1970", "654.842.943-00", 3);
             ClienteController.addCliente(5,"Maria José", "03/08/1988", "452.874.523-03", 4);
-        }
-        public static void Cliente(){
+
+            IEnumerable ClienteQuery = 
+                from Cliente in ClienteController.cliente()
+                where Cliente.IdCLiente > 1
+                select Cliente;
             
-            foreach (Cliente cliente in ClienteController.cliente())
+            foreach (Cliente cliente in ClienteQuery)
             {
-                Console.WriteLine(cliente);
+                Console.WriteLine(cliente.Nome);
+                Console.WriteLine(cliente.Cpf);
             }
         }
     }
