@@ -8,7 +8,7 @@ namespace Controllers {
             return Cliente.Clientes();
         }
         public static void addCliente(int id, string nome, string cpf, string dtNasc, int diasDevolucao){
-            new Cliente(id, nome, cpf, dtNasc,diasDevolucao);
+            new Cliente (id, nome, cpf, dtNasc,diasDevolucao);
         }
     }
 }

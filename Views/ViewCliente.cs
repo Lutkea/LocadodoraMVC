@@ -15,7 +15,7 @@ namespace View{
 
             IEnumerable ClienteQuery = 
                 from Cliente in ClienteController.cliente()
-                where Cliente.IdCLiente > 1
+                where Cliente.ClienteId > 1
                 select Cliente;
             
             foreach (Cliente cliente in ClienteQuery)

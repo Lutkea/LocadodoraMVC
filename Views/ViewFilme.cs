@@ -20,7 +20,7 @@ namespace View{
 
                 IEnumerable FilmeQuery = 
                 from Filme in FilmeController.filme()
-                where Filme.IdFilme > 5
+                where Filme.FilmeId > 5
                 select Filme;
              
             foreach (Filme filme in FilmeQuery)
