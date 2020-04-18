@@ -7,7 +7,7 @@ namespace Controllers {
     public class LocacaoController
     {
         public static List<Locacao> locacoes(){
-            return Locacao.Locacoes();
+            return Locacao.Locacacoes();
         }
         public static void addlocacoes(int idlocacao, Cliente cliente, Filme filme, DateTime datalocacao){
             new Locacao(idlocacao, cliente, filme, datalocacao);

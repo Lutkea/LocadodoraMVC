@@ -10,13 +10,7 @@ namespace Models
     {      
             [Key]
             public int LocacaoId { get; set; }
-
-        internal static List<Locacao> Locacoes()
-        {
-            throw new NotImplementedException();
-        }
-
-        [Required]
+            [Required]
             public Cliente Cliente { get; set; }
             public Filme Filme { get; set; }
             public DateTime DataLocacao { get; set; }

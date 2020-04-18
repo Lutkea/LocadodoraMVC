@@ -12,6 +12,7 @@ namespace Models
             public int FilmeId { get; set; }
             [Required]
             public String Nome { get; set; }
+            [Required]
             public String Sinopse { get; set; }
             public String AnoLancamento { get; set; }
             public int Valor{ get; set; }

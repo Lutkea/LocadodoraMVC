@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Repositories;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Controllers;
 
 namespace Models
 {
@@ -13,7 +12,9 @@ namespace Models
             public int ClienteId { get; set; }
             [Required]
             public String Nome { get; set; }
+            [Required]
             public String Cpf { get; set; }
+            [Required]
             public String DtNasc { get; set; }
             public int DiasDevolucao;
 
