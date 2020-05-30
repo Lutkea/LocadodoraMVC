@@ -7,8 +7,8 @@ namespace Controllers {
         public static List<Cliente> cliente(){
             return Cliente.Clientes();
         }
-        public static void addCliente(int id, string nome, string cpf, string dtNasc, int diasDevolucao){
-            new Cliente (id, nome, cpf, dtNasc,diasDevolucao);
+        public static void addCliente(string nome, string cpf, string dtNasc, int diasDevolucao){
+            new Cliente (nome, cpf, dtNasc,diasDevolucao);
         }
     }
 }

@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Models;
-using View;
 
 //simular banco de dados
 namespace Repositorios{

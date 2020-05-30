@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gt3iRYzAy+Kv6u3xLx590MicnjjLkAAhW4m1DPfDzHpwwarwb+uyBAsDlxZkP27iAvbBR5VIDa3z41t+2w857Q==",
+  "dgSpecHash": "AiLX8tN00JCisVeXlX+wxHkrez7q7Cdh17locR3koLcmXPh20m0jVNQK5FaGjmVUr01KF5yKj7R9oam/6w/STw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\amanda.lutke\\Desktop\\locadoraMVC\\LocadodoraMVC\\LocadodoraMVC.csproj",
+  "projectFilePath": "C:\\Users\\amanda.lutke\\LocadodoraMVC\\LocadodoraMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amanda.lutke\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\amanda.lutke\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

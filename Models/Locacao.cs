@@ -11,6 +11,9 @@ namespace Models
             [Key]
             public int LocacaoId { get; set; }
             [Required]
+            public int ClienteId { get; set; }
+            [Required]
+            public int FilmeId { get; set; }
             public Cliente Cliente { get; set; }
             public Filme Filme { get; set; }
             public DateTime DataLocacao { get; set; }
@@ -23,8 +26,8 @@ namespace Models
     
          public Locacao(int idlocacao, Cliente cliente, Filme filme, DateTime datalocacao) {
             LocacaoId = idlocacao;
-            Cliente = cliente;
-            Filme = filme;
+            ClienteId = cliente.ClienteId;
+            FilmeId = filme.FilmeId;
             DataLocacao = datalocacao;    
 
             var db = new Context();

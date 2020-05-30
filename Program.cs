@@ -1,63 +1,109 @@
 using System;
-using View;
+using Views;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace LocadodoraMVC
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
-            View.ViewCliente.AddCliente();
-            View.ViewFilme.AddFilme();
-            View.ViewLocacao.Addlocacoes();
-
-            int op =0;
-            do{
-                Console.WriteLine("BlockBuster Ads!");
-                Console.WriteLine ("+-----------------------------------------+");
-                Console.WriteLine ("|           BlockBuster Ads!              |");
-                Console.WriteLine ("|Escolha a opção desejada:                |");
-                Console.WriteLine ("| 1 - Consultar Clientes                  |");
-                Console.WriteLine ("| 2 - Consultar Filmes                    |");
-                Console.WriteLine ("| 3 - Consultar Cliente e Filmes locados  |");
-                Console.WriteLine ("| 0 - Sair                                |");
-                Console.WriteLine ("+-----------------------------------------+");
-                try {
-                    op = Convert.ToInt32(Console.ReadLine());
-                } catch {
-                Console.WriteLine ("Digite uma opção");
-                op = 99;
-                }
-                switch (op)
-                {
-                    case 1:{
-                        Console.WriteLine("Consultar Cliente");
-                        View.ViewCliente.AddCliente();
-                        break;
-                    }
-                    case 2:{
-                        Console.WriteLine("Consultar Filme");
-                        View.ViewFilme.AddFilme();
-                        Console.WriteLine("\n");
-                        break;
-                    }
-                    case 3:{
-                        Console.WriteLine("Consultar Cliente e Filmes locados ");
-                        View.ViewLocacao.Addlocacoes();
-                        Console.WriteLine("\n");
-                        break;
-                    }
-                    case 0:{
-                        Console.WriteLine("Sair");
-                        break;
-                    }
-
-                    default:{
-                        Console.WriteLine("\nNÚMERO INVÁLIDO\n ");
-                        break;
-                    }
-                }
-            }while(op!=0);  
+        {           
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Formulario());
+        
         }
     }
-}  
+        public class Formulario : Form {
+        
+        Label lbConsulta;
+        Label lbCadastra;
+        Button btnListaCliente;
+        Button btnListaFilmes;
+        Button btnListaLocacao;
+        Button btCadastraCliente;
+        Button btSair;
+
+        public Formulario(){
+
+            this.Text = "Blockbuster Ads!";
+            this.Size = new Size (270, 370);
+
+            lbConsulta = new Label();
+            lbConsulta.Text = "Consulta";
+            lbConsulta.Location = new Point(95,5);
+            this.Controls.Add(lbConsulta);
+
+            btnListaCliente = new Button();
+            btnListaCliente.Text = "Listar Clientes";
+            btnListaCliente.Location = new Point(95, 45);
+            btnListaCliente.Size = new Size (100,20);
+            btnListaCliente.Click += new EventHandler (btnListaClienteClick);
+            this.Controls.Add(btnListaCliente);
+
+            btnListaFilmes = new Button();
+            btnListaFilmes.Text = "Listar Filmes";
+            btnListaFilmes.Location = new Point(95, 65);
+            btnListaFilmes.Size = new Size (100,20);
+            btnListaFilmes.Click += new EventHandler (btnListaFilmesClick);
+            this.Controls.Add(btnListaFilmes);
+
+            btnListaLocacao = new Button();
+            btnListaLocacao.Text = "Listar Locações";
+            btnListaLocacao.Location = new Point(95, 84);
+            btnListaLocacao.Size = new Size (100,20);
+            btnListaLocacao.Click += new EventHandler (btnListaLocacaoClick);
+            this.Controls.Add(btnListaLocacao);
+
+            lbCadastra = new Label();
+            lbCadastra.Text = "Cadastro";
+            lbCadastra.Location = new Point(95,130);
+            this.Controls.Add(lbCadastra);
+
+            btCadastraCliente = new Button();
+            btCadastraCliente.Text = "Cadastrar Cliente";
+            btCadastraCliente.Location = new Point(95, 180);
+            btCadastraCliente.Size = new Size(130, 20);
+            btCadastraCliente.Click += new EventHandler (btCadastraClienteClick);
+            this.Controls.Add(btCadastraCliente);
+
+            btSair = new Button();
+            btSair.Text = "Sair";
+            btSair.Location = new Point(130, 300);
+            btSair.Click += new EventHandler(btSairClick);
+            this.Controls.Add(btSair);
+        } 
+
+            private void btCadastraClienteClick(object sender, EventArgs e)
+            {
+                CadastraCliente cadastrarCliente = new CadastraCliente();
+                cadastrarCliente.Show();
+                this.Hide();
+            }
+            private void btnListaClienteClick(object sender, EventArgs e)
+            {
+                ListaCliente listaCliente = new ListaCliente();
+                listaCliente.Show();
+                this.Hide();
+            }
+            private void btnListaFilmesClick(object sender, EventArgs e)
+            {
+                ListaFilme listaFilme = new ListaFilme();
+                listaFilme.Show();
+                this.Hide();
+            }
+            private void btnListaLocacaoClick(object sender, EventArgs e)
+            {
+                ListaLocacao listaLocacao = new ListaLocacao();
+                listaLocacao.Show();
+                this.Hide();
+            }
+            
+            private void btSairClick(object sender, EventArgs e)
+            {
+                this.Close();
+            }
+    }
+}

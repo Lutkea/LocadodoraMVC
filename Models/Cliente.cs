@@ -22,8 +22,7 @@ namespace Models
 
             }
 
-         public Cliente (int Id, string nome, string cpf, String dtNasc, int diasDevolucao){{
-            ClienteId = Id;
+         public Cliente (string nome, string cpf, String dtNasc, int diasDevolucao){{
             Nome = nome;
             Cpf = cpf;
             DtNasc = dtNasc;

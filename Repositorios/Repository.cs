@@ -12,6 +12,6 @@ namespace Repositories
         public DbSet<FilmeLocacao> FilmeLocacao { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseMySql("Server=localhost;User Id=root;Database=bancoMVC");
+            => options.UseMySql("Server=localhost;User Id=root;Database=bancomvc");
     }
 }
