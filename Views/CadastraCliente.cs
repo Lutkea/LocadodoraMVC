@@ -27,11 +27,13 @@ namespace Views{
         LinkLabel helpLink;
         Button btnConfirma;
         Button btnCancela;
+        Form parent; 
 
-        public CadastraCliente(){
+        public CadastraCliente(Form parent){
             
             this.Text = "Cadastro de Cliente";
             this.Size = new Size (400, 500);
+            this.parent = parent;
         
             label = new Label();
             label.Text = "Informações";
@@ -185,6 +187,7 @@ namespace Views{
                 }   
                 private void btnCancelaClick(object sender, EventArgs e){
                     this.Close();
+                    this.parent.Show();
                 }
     }
 }

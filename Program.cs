@@ -78,25 +78,25 @@ namespace LocadodoraMVC
 
             private void btCadastraClienteClick(object sender, EventArgs e)
             {
-                CadastraCliente cadastrarCliente = new CadastraCliente();
+                CadastraCliente cadastrarCliente = new CadastraCliente(this);
                 cadastrarCliente.Show();
                 this.Hide();
             }
             private void btnListaClienteClick(object sender, EventArgs e)
             {
-                ListaCliente listaCliente = new ListaCliente();
+                ListaCliente listaCliente = new ListaCliente(this);
                 listaCliente.Show();
                 this.Hide();
             }
             private void btnListaFilmesClick(object sender, EventArgs e)
             {
-                ListaFilme listaFilme = new ListaFilme();
+                ListaFilme listaFilme = new ListaFilme(this);
                 listaFilme.Show();
                 this.Hide();
             }
             private void btnListaLocacaoClick(object sender, EventArgs e)
             {
-                ListaLocacao listaLocacao = new ListaLocacao();
+                ListaLocacao listaLocacao = new ListaLocacao(this);
                 listaLocacao.Show();
                 this.Hide();
             }

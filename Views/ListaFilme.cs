@@ -11,11 +11,13 @@ namespace Views{
                    
         ListView ListFilme;
         Button btCancela;
+        Form parent;
 
-        public ListaFilme (){
+        public ListaFilme (Form parent){
 
             this.Text = "Lista de Filmes";
             this.Size = new Size (400, 500);
+            this.parent = parent;
 
             ListFilme = new ListView();
             ListFilme.Location = new Point (15, 20);
@@ -44,6 +46,7 @@ namespace Views{
         }
             private void btCancelaClick(object sender, EventArgs e){
                 this.Close();
+                this.parent.Show();
             }
     }
 }

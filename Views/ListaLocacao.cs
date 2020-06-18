@@ -11,11 +11,13 @@ namespace Views{
                    
         ListView ListLocacao;
         Button btCancela;
+        Form parent;
 
-        public ListaLocacao (){
+        public ListaLocacao (Form parent){
 
         this.Text = "Lista de Locações";
         this.Size = new Size (400, 500);
+        this.parent = parent;
 
         ListLocacao = new ListView();
         ListLocacao.Location = new Point (15, 20);
@@ -47,6 +49,7 @@ namespace Views{
         }
             private void btCancelaClick(object sender, EventArgs e){
                 this.Close();
+                this.parent.Show();
             }
     }        
 }
